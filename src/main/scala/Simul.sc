@@ -30,6 +30,7 @@ import simulacrum._
 
 }
 
+
 implicit val MultiplierInt: Multiplier[Int] = new Multiplier[Int] {
   def multiply(a: Int, b: Int): Int = a * b
 

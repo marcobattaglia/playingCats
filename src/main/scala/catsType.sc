@@ -43,6 +43,9 @@ final case class Cat(
                     )
 import PrintableSyntax._
 import PrintableInstances._
+import cats.syntax.SemigroupalBuilder
+
+import scala.util.Try
 
 
 
@@ -97,4 +100,3 @@ def decode[A](value: String)(implicit c: Codec[A]): Option[A] =
 
 implicit def boxCodec[A](implicit c: Codec[A]): Codec[Box[A]] =
   c.imap[Box[A]](Box(_), _.value)
-
