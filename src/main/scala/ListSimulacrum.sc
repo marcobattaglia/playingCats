@@ -55,3 +55,4 @@ List(1) >>=  {(x:Int) => List(x+1)}
 Option(1) >>= {(x:Int) => Option(1)}
 Option(1) >>= {(x:Int) => Some(1)}
 right[Exception,Int](1) flatMap {(x:Int) => right[Exception,Int](1)}
+
