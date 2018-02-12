@@ -1,5 +1,7 @@
+import cats.arrow.Arrow
 import cats.data.Ior
 import cats.data.Ior.{left, right}
+import cats.kernel.Semigroup
 
 import scala.language.higherKinds
 import scala.util.{Failure, Success, Try}
@@ -55,4 +57,45 @@ List(1) >>=  {(x:Int) => List(x+1)}
 Option(1) >>= {(x:Int) => Option(1)}
 Option(1) >>= {(x:Int) => Some(1)}
 right[Exception,Int](1) flatMap {(x:Int) => right[Exception,Int](1)}
+
+implicit val exceptionCombinator: Semigroup[Exception] =new Semigroup[Exception]{
+  override def combine(x: Exception, y: Exception) = x
+}
+
+case class Portfolio(p:String)
+case class PortfolioE(portfolio:Portfolio)
+case class Node(node:String)
+case class NodeE(node:Node)
+case class Result(r:String)
+case class Response(result:Result)
+type ExOr[R] = Ior[Exception,R]
+type Ex = Exception
+val ntoEntity: (Node, Portfolio) => ExOr[NodeE] = (n:Node, p:Portfolio) => Ior.right[Ex, NodeE](NodeE(n))
+val ptoEntity: (Portfolio) => ExOr[PortfolioE] = (p:Portfolio) => Ior.right[Ex, PortfolioE](PortfolioE(p))
+val compute: (NodeE, PortfolioE) => ExOr[Result] = (ne:NodeE, pe:PortfolioE) => Ior.right[Ex,Result](Result("result"))
+val renderResponse: Result => ExOr[Response] = (r:Result) => Ior.right[Ex,Response](Response(r))
+val portfolio = Portfolio("porftolio")
+val node = Node("node")
+for{
+
+  nodeE <- ntoEntity(node, portfolio)
+  portfolioE <- ptoEntity(portfolio)
+  result <- compute(nodeE,portfolioE)
+  response <- renderResponse(result)
+
+
+} yield response
+import cats.syntax.arrow._
+import cats.implicits._
+import cats.data.Kleisli
+import cats.arrow.Arrow
+import cats.instances.all._
+import cats.syntax.flatMap._
+import cats.syntax.ArrowSyntax
+
+val addEmpty: Int => Int = _ + 0
+val multiplyEmpty: Int => Double= _ * 1d
+val f: Int => (Int, Double) = addEmpty &&& multiplyEmpty
+val k = Kleisli.liftF(ntoEntity)
+Kleis
 
