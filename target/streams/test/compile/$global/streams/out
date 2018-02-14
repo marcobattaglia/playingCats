@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/home/marco/ProgAndWorkspace/catsStudio/src/test/scala/com/company/ApiResultExceptionTest.scala:17:65: could not find implicit value for parameter eqA: cats.kernel.Eq[Exception][0m
+[0m[[0m[31merror[0m] [0m[0m  checkAll("Exception.SemigroupLaws", SemigroupTests[Exception].semigroup)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

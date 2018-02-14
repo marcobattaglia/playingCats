@@ -1,0 +1,9 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mIntCombinatorTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int.SemigroupLaws.semigroup.semigroup associative[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int.SemigroupLaws.semigroup.semigroup combineAllOption[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int.SemigroupLaws.semigroup.semigroup repeat1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int.SemigroupLaws.semigroup.semigroup repeat2[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Exception.SemigroupLaws.semigroup.semigroup associative[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Exception.SemigroupLaws.semigroup.semigroup combineAllOption[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Exception.SemigroupLaws.semigroup.semigroup repeat1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Exception.SemigroupLaws.semigroup.semigroup repeat2[0m[0m

@@ -1,0 +1,31 @@
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating /home/marco/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-1.0.0-RC1.jar: class cats.kernel.Eq now provided by /home/marco/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-1.0.0-RC2.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set(/home/marco/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-1.0.0-RC1.jar)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(com.company.ExceptionCombinator)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set(/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(com.company.ExceptionCombinator)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /home/marco/ProgAndWorkspace/catsStudio/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.0.3:compile for Scala 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.0.3:compile for Scala 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 6769e5e0 for Scala compiler version 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Ypartial-unification[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Xplugin:/home/marco/.ivy2/cache/org.scalamacros/paradise_2.12.4/jars/paradise_2.12.4-2.1.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Xplugin:/home/marco/.ivy2/cache/org.spire-math/kind-projector_2.12/jars/kind-projector_2.12-0.9.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.45.x86_64/jre/classes:/home/marco/.sbt/boot/scala-2.12.4/lib/scala-library.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/marco/ProgAndWorkspace/catsStudio/target/scala-2.12/classes:/home/marco/.ivy2/cache/org.typelevel/cats-core_2.12/jars/cats-core_2.12-1.0.0-RC2.jar:/home/marco/.ivy2/cache/org.typelevel/cats-macros_2.12/jars/cats-macros_2.12-1.0.0-RC2.jar:/home/marco/.ivy2/cache/org.typelevel/machinist_2.12/jars/machinist_2.12-0.6.2.jar:/home/marco/.sbt/boot/scala-2.12.4/lib/scala-reflect.jar:/home/marco/.ivy2/cache/org.typelevel/cats-kernel_2.12/jars/cats-kernel_2.12-1.0.0-RC2.jar:/home/marco/.ivy2/cache/com.github.mpilquist/simulacrum_2.12/jars/simulacrum_2.12-0.11.0.jar:/home/marco/.ivy2/cache/org.typelevel/macro-compat_2.12/jars/macro-compat_2.12-1.1.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mCompilation failed (CompilerInterface)[0m
+[0m[[0m[31merror[0m] [0m[0m(compile:[31mcompileIncremental[0m) Compilation failed[0m

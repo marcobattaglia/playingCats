@@ -1,0 +1,22 @@
+[0m[[0m[31merror[0m] [0m[0m/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala:60:7: headPlusLast is already defined as value headPlusLast[0m
+[0m[[0m[31merror[0m] [0m[0m  val headPlusLast = combine(headK, lastK).>>>(Arrow[Kleisli[Option, ?, ?]].lift(((_: Int) + (_: Int)).tupled))[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala:55:37: value >>> is not a member of type parameter F[A,(A, A)][0m
+[0m[[0m[31merror[0m] [0m[0m    Arrow[F].lift((a: A) => (a, a)) >>> (fab *** fac)[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala:55:46: value *** is not a member of type parameter F[A,B][0m
+[0m[[0m[31merror[0m] [0m[0m    Arrow[F].lift((a: A) => (a, a)) >>> (fab *** fac)[0m
+[0m[[0m[31merror[0m] [0m[0m                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala:59:29: could not find implicit value for evidence parameter of type cats.arrow.Arrow[[A, B]cats.data.Kleisli[Option,A,B]][0m
+[0m[[0m[31merror[0m] [0m[0m  val headPlusLast = combine(headK, lastK).andThen(Arrow[Kleisli[Option, ?, ?]].lift(((_: Int) + (_: Int)).tupled))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala:59:57: could not find implicit value for parameter instance: cats.arrow.Arrow[[β$0$, γ$1$]cats.data.Kleisli[Option,β$0$,γ$1$]][0m
+[0m[[0m[31merror[0m] [0m[0m  val headPlusLast = combine(headK, lastK).andThen(Arrow[Kleisli[Option, ?, ?]].lift(((_: Int) + (_: Int)).tupled))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala:60:29: could not find implicit value for evidence parameter of type cats.arrow.Arrow[[A, B]cats.data.Kleisli[Option,A,B]][0m
+[0m[[0m[31merror[0m] [0m[0m  val headPlusLast = combine(headK, lastK).>>>(Arrow[Kleisli[Option, ?, ?]].lift(((_: Int) + (_: Int)).tupled))[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/marco/ProgAndWorkspace/catsStudio/src/main/scala/com/company/ApiResultException.scala:60:53: could not find implicit value for parameter instance: cats.arrow.Arrow[[β$2$, γ$3$]cats.data.Kleisli[Option,β$2$,γ$3$]][0m
+[0m[[0m[31merror[0m] [0m[0m  val headPlusLast = combine(headK, lastK).>>>(Arrow[Kleisli[Option, ?, ?]].lift(((_: Int) + (_: Int)).tupled))[0m
+[0m[[0m[31merror[0m] [0m[0m                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m7 errors found[0m
