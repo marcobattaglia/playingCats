@@ -1,4 +1,3 @@
-import cats.arrow.Arrow
 import cats.data.Ior
 import cats.data.Ior.{left, right}
 import cats.kernel.Semigroup
@@ -39,8 +38,8 @@ implicit object FoldErroSyntax{
   }
 }
 
-import FoldErrorInstances._
 import FoldErroSyntax._
+import FoldErrorInstances._
 val c = List(1,2,3,4,5,0,6)
 val func=(x:Int) => Try{  x/x} match {
 case Success(r:Int) => right(r)
@@ -69,14 +68,16 @@ case class NodeE(node:Node)
 case class Result(r:String)
 case class Response(result:Result)
 type ExOr[R] = Ior[Exception,R]
+type ExEr[R] = Either[Exception,R]
 type Ex = Exception
 val ntoEntity: (Node, Portfolio) => ExOr[NodeE] = (n:Node, p:Portfolio) => Ior.right[Ex, NodeE](NodeE(n))
 val ptoEntity: (Portfolio) => ExOr[PortfolioE] = (p:Portfolio) => Ior.right[Ex, PortfolioE](PortfolioE(p))
+val ptoEntity2= (p:Portfolio) => Right(PortfolioE(p))
 val compute: (NodeE, PortfolioE) => ExOr[Result] = (ne:NodeE, pe:PortfolioE) => Ior.right[Ex,Result](Result("result"))
 val renderResponse: Result => ExOr[Response] = (r:Result) => Ior.right[Ex,Response](Response(r))
 val portfolio = Portfolio("porftolio")
 val node = Node("node")
-for{
+val res = for{
 
   nodeE <- ntoEntity(node, portfolio)
   portfolioE <- ptoEntity(portfolio)
@@ -85,17 +86,15 @@ for{
 
 
 } yield response
-import cats.syntax.arrow._
-import cats.implicits._
+
 import cats.data.Kleisli
-import cats.arrow.Arrow
 import cats.instances.all._
-import cats.syntax.flatMap._
-import cats.syntax.ArrowSyntax
+import cats.syntax.all._
 
 val addEmpty: Int => Int = _ + 0
 val multiplyEmpty: Int => Double= _ * 1d
 val f: Int => (Int, Double) = addEmpty &&& multiplyEmpty
 val k = Kleisli.liftF(ntoEntity)
-Kleis
+  val id = Kleisli.liftF((n:Node,p:Portfolio)=> Ior.right[Ex,(Node,Portfolio)](n,p))
+val k2 = Kleisli[Either[Ex,PortfolioE],Portfolio,ExEr[PortfolioE]](ptoEntity2)
 
