@@ -3,16 +3,17 @@ name := "catsStudio"
 version := "0.1"
 
 scalaVersion := "2.12.4"
+val catsVersion = "1.0.0-RC2"
 
-val catsCore = "org.typelevel" %% "cats-core" % "1.0.1"
+val catsCore = "org.typelevel" %% "cats-core" % catsVersion
 
-val catsMacros= "org.typelevel" %% "cats-macros" % "1.0.1"
+val catsMacros= "org.typelevel" %% "cats-macros" % catsVersion
 
-val catsKernel = "org.typelevel" %% "cats-kernel" % "1.0.1"
+val catsKernel = "org.typelevel" %% "cats-kernel" % catsVersion
 
-val catsLaws= "org.typelevel" %% "cats-laws" % "1.0.1" % Test
+val catsLaws= "org.typelevel" %% "cats-laws" % catsVersion  % Test
 
-val catsTestKit= "org.typelevel" %% "cats-testkit" % "1.0.1" % Test
+val catsTestKit= "org.typelevel" %% "cats-testkit" % catsVersion  % Test
 
 val scalacheckShapeless = "com.github.alexarchambault" %% "scalacheck-shapeless_1.13" % "1.1.6" % Test
 
