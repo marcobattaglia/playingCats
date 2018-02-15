@@ -4,7 +4,7 @@
 		module="catsstudio$sources"
 		revision="0.1"
 		status="integration"
-		publication="20180214204659"
+		publication="20180215173328"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

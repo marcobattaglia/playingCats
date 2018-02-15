@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180214204659"/>
+		date="20180215173328"/>
 	<dependencies>
 		<module organisation="org.typelevel" name="cats-core_2.12">
 			<revision name="1.0.0-RC2" status="release" pubdate="20171219022918" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typelevel/cats" extra-info.apiURL="http://typelevel.org/cats/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="7">

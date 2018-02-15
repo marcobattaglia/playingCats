@@ -10,9 +10,6 @@
       </plugins>
     </profile>
     <profile name="sbt 1" modules="catsstudio">
-      <parameters>
-        <parameter value="-Ypartial-unification" />
-      </parameters>
       <plugins>
         <plugin path="$USER_HOME$/.ivy2/cache/org.scalamacros/paradise_2.12.4/jars/paradise_2.12.4-2.1.0.jar" />
         <plugin path="$USER_HOME$/.ivy2/cache/org.spire-math/kind-projector_2.12/jars/kind-projector_2.12-0.9.4.jar" />

@@ -78,9 +78,14 @@ val r2PortfolioEi: Request => ExEr[PortfolioE] = (r:Request) => Ior.right[Ex, Po
 
 
 val r2NodeKEi: Kleisli[ExEr, Request, NodeE] = Kleisli(r2NodeEi)
-val r2PortfolioKEi:Kleisli[ExEr,Request,PortfolioE] = Kleisli(r2PortfolioEi)
+implicit val r2PortfolioKEi:Kleisli[ExEr,Request,PortfolioE] = Kleisli(r2PortfolioEi)
 val result: Request => (ExEr[NodeE], ExEr[PortfolioE]) = combine(r2NodeEi,r2PortfolioEi)
 val resultCombined = combine(r2PortfolioKEi ,r2NodeKEi)
 val resultK =  Arrow[Kleisli[ExEr,?,?]].merge(r2PortfolioKEi ,r2NodeKEi)
 val req = Request(Node("node"),Portfolio("portfolio"))
 resultK(req)
+import cats.implicits._
+class arrOps[A,B,C](implicit k:Kleisli[ExEr,A,B]){
+  def mer(g:Kleisli[ExEr,A,C]) =Arrow[Kleisli[ExEr,?,?]].merge(k,g)
+}
+

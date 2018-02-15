@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180214192045"/>
+		date="20180215173000"/>
 	<dependencies>
 		<module organisation="com.github.alexarchambault" name="scalacheck-shapeless_1.13_2.12">
 			<revision name="1.1.6" status="release" pubdate="20170628151322" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/alexarchambault/scalacheck-shapeless" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="20">
